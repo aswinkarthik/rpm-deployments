@@ -2,7 +2,8 @@
 
 set -e 
 
+echo "Starting up script"
+ruby -v
 cd ruby-app/blog
 source /etc/profile.d/rvm.sh
-sudo gem install bundle
 bundle install
