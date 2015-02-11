@@ -255,3 +255,5 @@ hs_err_pid*
 ### Vagrant ###
 .vagrant/
 
+## My Ignores
+*.rpm
