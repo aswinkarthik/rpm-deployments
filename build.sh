@@ -14,5 +14,5 @@ bundle install
 bundle package --all
 
 cd ../
-tar blog.tar blog
+tar cvf blog.tar blog
 cp blog.tar ../artifacts
