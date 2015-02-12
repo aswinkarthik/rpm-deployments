@@ -12,6 +12,13 @@ Vagrant.configure(2) do |config|
   #
   config.vm.provision "shell", inline: <<-SHELL
     sudo yum install java-1.7.0-openjdk-devel -y
+    sudo yum install curl -y
+    command curl -sSL https://rvm.io/mpapis.asc | sudo gpg2 --import -
+    curl -L get.rvm.io | bash -s stable
+    rvm requirements
+    source ~/.rvm/rvm.sh
+    sudo yum localinstall /vagrant_data/*.rpm -y
+    sudo gem install bundler || true
   SHELL
 
   config.vm.define "gocd" do |gocd|
