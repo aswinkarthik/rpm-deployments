@@ -3,9 +3,8 @@
 set -e 
 
 echo "Starting up script"
-mkdir artifacts
+mkdir ../../artifacts
 
-cd ruby-app/blog
 source /etc/profile.d/rvm.sh
 
 ruby -v
